@@ -21,9 +21,9 @@ public class Job {
         this.id = nextId;
         nextId++;
     }
-    public Job(int id, String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+    public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
-        this.id = id;
+       // this.id = id;
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -57,19 +57,19 @@ public class Job {
     }
 
     public Employer getEmployer() {
-        return employer;
+        return this.employer;
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
 
-    public PositionType getPositionType() {
-        return positionType;
+    public PositionType  getPositionType() {
+        return this.positionType;
     }
 
     public CoreCompetency getCoreCompetency() {
-        return coreCompetency;
+        return this.coreCompetency;
     }
 
     public void setName(String name) {
