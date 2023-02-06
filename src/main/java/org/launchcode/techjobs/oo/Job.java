@@ -35,6 +35,78 @@ public class Job {
 // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
     @Override
+    public String toString(){
+      if(getName()==null&&getEmployer()==null&&getLocation()==null&&getPositionType()==null&&getCoreCompetency()==null) {
+//          return "\n" + "ID : __________" + "\n" +
+//                  "Name : __________" + "\n" +
+//                  "Employer : __________" + "\n" +
+//                  "Location : __________" + "\n" +
+//                  "Position Type : __________" + "\n" +
+//                  "Core Competency : __________" + "\n";
+
+          //this.id=this.id-1;
+          return "OOPS! This job does not seem to exist.";
+      }
+      else {
+          String test2;
+          String test3 = "Data Not Available" + "\n";
+
+          if (getId() != 0) {
+              test2 = "\n"+"ID: " + getId() + "\n";
+          } else {
+              test2 = "ID: " + test3;
+          }
+
+          if (getName() ==null) {
+              test2 += "Name: ____________";// + getName() + "\n";
+          } else {
+              if(getName().isEmpty()) {
+                  test2 += "Name: " + test3;
+              }else {
+                  test2 +="Name: "+getName()+"\n";
+              }
+          }
+
+          if (employer==null||employer.getValue() == null) {
+              test2+="Employer : __________" + "\n" ;
+          } else {
+              if(!employer.getValue().isEmpty()){
+              test2 += "Employer: " + employer.getValue() + "\n";}
+              else {
+               test2 += "Employer: " + test3;
+              }
+          }
+          if (location==null||location.getValue() == null) {
+              test2+="Location : _________" + "\n" ;
+          } else {
+              if(!location.getValue().isEmpty()){
+                  test2 += "Location: " + location.getValue() + "\n";}
+              else {
+                  test2 += "Location: " + test3;
+              }
+          }
+          if (positionType==null||positionType.getValue() == null) {
+              test2+="Position Type : _________" + "\n" ;
+          } else {
+              if(!positionType.getValue().isEmpty()){
+                  test2 += "Position Type: " + positionType.getValue() + "\n";}
+              else {
+                  test2 += "Position Type: " + test3;
+              }
+          }
+          if (coreCompetency==null||coreCompetency.getValue() == null) {
+              test2+="Core Competency : _________" + "\n" ;
+          } else {
+              if(!coreCompetency.getValue().isEmpty()){
+                  test2 += "Core Competency: " + coreCompetency.getValue() + "\n";}
+              else {
+                  test2 += "Core Competency: " + test3;
+              }
+          }
+          return test2;
+      }
+    }
+    @Override
     public boolean equals(Object obj){
         if(this==obj)return true;
         if(!(obj instanceof Job))return false;
