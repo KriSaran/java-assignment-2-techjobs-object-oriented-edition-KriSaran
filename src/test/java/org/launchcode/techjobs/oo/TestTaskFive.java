@@ -150,7 +150,7 @@ public class TestTaskFive extends AbstractTest {
     public void testTestToStringHandlesEmptyFieldCallsAssertions (@Mocked Assert mockedAssert) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Class jobTestClass = getClassByName("test.JobTest");
         JobTest jobTest = (JobTest) jobTestClass.getConstructor().newInstance();
-        Method testToStringHandlesEmptyField = jobTestClass.getMethod("testToStringHandlesEmptyField");
+            Method testToStringHandlesEmptyField = jobTestClass.getMethod("testToStringHandlesEmptyField");
 
         new Expectations() {{
             Assert.assertEquals(anyString, anyString); minTimes = 1;

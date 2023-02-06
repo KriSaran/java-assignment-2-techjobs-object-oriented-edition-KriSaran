@@ -37,19 +37,19 @@ public class Job {
     @Override
     public String toString(){
       if(getName()==null&&getEmployer()==null&&getLocation()==null&&getPositionType()==null&&getCoreCompetency()==null) {
-//          return "\n" + "ID : __________" + "\n" +
-//                  "Name : __________" + "\n" +
-//                  "Employer : __________" + "\n" +
-//                  "Location : __________" + "\n" +
-//                  "Position Type : __________" + "\n" +
-//                  "Core Competency : __________" + "\n";
+          return "\n" + "ID : __________" + "\n" +
+                  "Name : __________" + "\n" +
+                  "Employer : __________" + "\n" +
+                  "Location : __________" + "\n" +
+                  "Position Type : __________" + "\n" +
+                  "Core Competency : __________" + "\n";
 
           //this.id=this.id-1;
-          return "OOPS! This job does not seem to exist.";
+ //        return "OOPS! This job does not seem to exist.";
       }
       else {
           String test2;
-          String test3 = "Data Not Available" + "\n";
+          String test3 = "Data not available" + "\n";
 
           if (getId() != 0) {
               test2 = "\n"+"ID: " + getId() + "\n";
